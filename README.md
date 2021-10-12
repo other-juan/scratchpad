@@ -1,2 +1,2 @@
 # scratchpad
-Archivos temporales, proyectos y drafts de scripts
+Archivos temporales y drafts de proyectos y scripts

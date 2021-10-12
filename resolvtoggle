@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+in_net_config=false
+current_net=""
+
+while read -r line; do
+
+  if [[ "$line" =~ ^#\ *NET: ]]; then
+    current_net=${line#*:}
+    echo current_net is $current_net
+    in_net_config=true
+  fi
+
+  [[ "$line" =~ ^(\#|\s*$) ]] && continue
+  echo "$line"
+done < /etc/resolv.conf
